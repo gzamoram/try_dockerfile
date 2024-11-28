@@ -18,4 +18,4 @@ jobs:
       - name: listar
         run: ls -la -R
       - name: build
-        run: docker build -t goyete:0.0.0
+        run: docker build -t goyete:0.0.0 .
