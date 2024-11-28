@@ -7,7 +7,7 @@ on:
 
 jobs:
   di_hola:
-    runs-on: ubuntu-18.04
+    runs-on: docker
     steps:
       - name: echo
         run: echo "hola"
