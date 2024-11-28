@@ -1,0 +1,14 @@
+name: Primero bueno
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  di_hola:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: echo
+        run: echo "hola"
+  
