@@ -1,4 +1,4 @@
-name: Primero bueno
+name: Deploy on release
 
 on:
   release:
@@ -12,9 +12,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: echo
-        run: echo "hola $DAY_OF_WEEK"
+      - name: ${{ github.ref_name }}
+        run: echo "hola ${{ github.ref_name }}"
       - name: listar variables
         run: env
       - name: build
-        run: docker build -t goyete:1.0.0 .
+        run: docker build -t goyete:${{ github.ref_name }} .
