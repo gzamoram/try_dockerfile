@@ -5,7 +5,7 @@ on:
     types: [published]
     
 jobs:
-  di_hola:
+  di_adios:
     runs-on: Linux
     steps:
       - name: Traer el repo
