@@ -9,6 +9,12 @@ jobs:
   di_hola:
     runs-on: Linux
     steps:
+      - name: Traer el repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: echo
         run: echo "hola"
+      - name: listar
+        run: ls -la -R
   
