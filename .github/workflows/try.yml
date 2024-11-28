@@ -1,10 +1,9 @@
 name: Primero bueno
 
 on:
-  push:
-    branches:
-      - main
-
+  release:
+    types: [published]
+    
 jobs:
   di_hola:
     runs-on: Linux
@@ -14,8 +13,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: echo
-        run: echo "hola"
-      - name: listar
-        run: ls -la -R
+        run: echo "hola $DAY_OF_WEEK"
+      - name: listar variables
+        run: env
       - name: build
-        run: docker build -t goyete:0.0.0 .
+        run: docker build -t goyete:1.0.0 .
