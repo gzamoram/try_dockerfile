@@ -17,4 +17,5 @@ jobs:
         run: echo "hola"
       - name: listar
         run: ls -la -R
-  
+      - name: build
+        run: docker build -t goyete:0.0.0
