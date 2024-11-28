@@ -9,9 +9,9 @@ jobs:
     runs-on: Linux
     steps:
       - name: Traer el repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: ${{ github.ref_name }}
       - name: ${{ github.ref_name }}
         run: echo "hola ${{ github.ref_name }}"
       - name: listar variables
